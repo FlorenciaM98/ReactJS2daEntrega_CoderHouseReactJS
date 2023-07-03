@@ -1,0 +1,123 @@
+/* Subpages and gallery */
+
+.gallery {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: -webkit-fill-available;
+    height: -moz-available;
+}
+
+.productsCategory-render {
+    background-color: $cFondoBasico;
+    margin-top: 1px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    margin-left: 1px;
+    padding: 30px;
+    color: $cCuerpo;
+    @include filas;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    gap: 5px;
+    align-items: start;
+    justify-content: center;
+
+    .product {
+        background-color: $cFondoBClaro;
+        height: 290px;
+        width: 275px;
+        padding: 5px;
+        @include columnas;
+        justify-content: space-between;
+        gap: 5px;
+
+        .product-Name {
+            text-align: center;
+            font-family: $fTitulo;
+            text-transform: none;
+            color: $cTerciario;
+            font-size: 18px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 275px;
+            height: 150px;
+        }
+
+        .product-Cat {
+            font-family: $fCuerpo;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        .product-Cat::before {
+            content: "etiquetas: ";
+        }
+
+        a {
+            color: $cSecundario;
+            font-family: $fEspecial;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+
+.subPage-title {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    height: 40px;
+    background-color: $cFondoBasico;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $fCuerpo;
+    font-size: 14px;
+    color: $cCuerpo;
+    text-transform: uppercase;
+}
+
+.subPage-cont {
+    @include columnas;
+    gap: 5px;
+    align-items: center;
+    background-color: $cFondoBasico;
+    margin-top: 1px;
+    padding: 20px;
+    height: -webkit-fill-available;
+    height: -moz-available;
+    margin-left: 1px;
+
+    img {
+        height: auto;
+        width: 80%;
+    }
+    
+    .subPage-info {
+        @include columnas;
+        width: 80%;
+        align-items: center;
+
+        p {
+            width: 60%;
+            font-family: $fCuerpo;
+            color: $cCuerpo;
+            font-size: 15px;
+        }
+
+        .subPage-info-tags {
+            @include columnas;
+            align-items: center;
+            width: 60%;
+            color: $cTerciario;
+            font-style: italic;
+            font-family: $cCuerpo;
+            font-size: 13px;
+        }
+    }
+}
